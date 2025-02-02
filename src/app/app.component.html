@@ -1,0 +1,29 @@
+<h1>HOLA</h1>
+<div class="container-fluid">
+  <a routerLink="/superheroes" class="btn btn-primary" routerLinkActive="active"> <i class="fa-solid fa-user"></i> Superheroes</a>
+  <a routerLink="/personajes" class="btn btn-primary" routerLinkActive="active"> <i class="fa-solid fa-user"></i> Personajes</a>
+  <a routerLink="/location" class="btn btn-primary" routerLinkActive="active"> <i class="fa-solid fa-user"></i> Locaciones</a>
+  <a routerLink="/episode" class="btn btn-primary" routerLinkActive="active"> <i class="fa-solid fa-user"></i> Episodios</a>
+
+</div>
+
+<!-- <div class="container-fluid">
+  <div class="row justify-content-space-evenly">
+    @for (trabajador of trabajdores; track trabajador) {
+    <div class="col-4">
+      <div class="card" style="width: 30rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{trabajador.persona.nombre}}</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">{{trabajador.persona.edad}}</h6>
+          <p class="strong">Es Mayor de Edad: {{trabajador.persona.mayor}}</p>
+          <p class="strong">{{trabajador.profesion}}</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+
+    }
+  </div>
+</div> -->
+<router-outlet></router-outlet>

@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row justify-content-space-around">
+    @if (bdataLOC) {
+      @for (locatizacion of bdataLOC.results; track locatizacion) {
+        <div class="col-3">
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              {{locatizacion.name}}
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{locatizacion.id}}</li>
+              <li class="list-group-item">{{locatizacion.created}}</li>
+              <li class="list-group-item">{{locatizacion.dimension}}</li>
+              <li class="list-group-item">
+                @for (residente of locatizacion.residents; track residente) {
+                  <ul>
+                    <li>{{residente}}</li>
+                  </ul>
+                }
+              </li>
+              <li class="list-group-item">{{locatizacion.type}}</li>
+              <li class="list-group-item">{{locatizacion.url}}</li>
+            </ul>
+          </div>
+        </div>
+      }
+    }
+
+  </div>
+
+</div>

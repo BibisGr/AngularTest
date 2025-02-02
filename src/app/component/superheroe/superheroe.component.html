@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <h2>{{superheroe.squadName}}</h2>
+      <h3>Ciudad: {{superheroe.homeTown}} - Base: {{superheroe.secretBase}}</h3>
+      <h3>Created: {{superheroe.created}}</h3>
+      <h3>Active
+        <span>
+          @if (superheroe.active) {
+          <i class="fa-solid fa-check text-success"></i>
+          }
+          @else {
+          <i class="fa-solid fa-ban text-danger"></i>
+          }
+        </span>
+      </h3>
+      <div class="row justify-content-around-evenly">
+
+        @for (member of superheroe.members; track member; let idx = $index) {
+        <div class="col-4">
+          <div class="card" [routerLink]="'/superheroe/' + idx">
+            <div class="card-header bg-info">
+              {{member.name}}
+            </div>
+            <div class="card-body">
+              <p class="card-text"><strong>Age:</strong>{{member.age}}</p>
+              <p class="card-text">Powers:
+                <span>
+                  <ul>
+                    @for (power of member.Powers; track power) {
+                    <li>
+                      {{power}}
+                    </li>
+                    }
+                  </ul>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container-fluid">
+
+  <div class="row justify-content-center" >
+    @if (bdataCHAR) {
+      <div class="col-3">
+        <br>
+      <button class="btn btn-primary" (click)="CambiarChar(bdataCHAR.id - 1)"> < Prev</button>
+      <button class="btn btn-primary" (click)="CambiarChar(bdataCHAR.id + 1)">Next ></button>
+
+      <div class="card" style="width: 18rem;">
+          <div class="card-header" >
+            {{bdataCHAR.name}}
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{bdataCHAR.id}}</li>
+            <li class="list-group-item">{{bdataCHAR.gender}}</li>
+            <li class="list-group-item">{{bdataCHAR.created}}</li>
+            <li class="list-group-item">{{bdataCHAR.location.name}} - {{bdataCHAR.location.url}}</li>
+            <li class="list-group-item">
+              <img src="{{bdataCHAR.image}}" width="200px"/>
+            </li>
+            <li class="list-group-item">{{bdataCHAR.origin.name}} - {{bdataCHAR.origin.url}}</li>
+            <li class="list-group-item">{{bdataCHAR.species}}</li>
+            <li class="list-group-item">{{bdataCHAR.status}}</li>
+            <li class="list-group-item">{{bdataCHAR.type}}</li>
+            <li class="list-group-item">{{bdataCHAR.url}}</li>
+          </ul>
+        </div>
+      </div>
+    }
+
+  </div>
+
+
+
+</div>

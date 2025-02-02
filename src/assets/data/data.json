@@ -1,0 +1,39 @@
+{
+  "squadName": "Super Hero Squad",
+  "homeTown": "Valencia City",
+  "created": "2024",
+  "secretBase": "Progresa",
+  "active": true,
+  "members": [
+    {
+      "name": "aqua Man",
+      "age": 30,
+      "SecretIdentity": "George Sea",
+      "Powers": [
+        "water gun",
+        "water kick",
+        "bubble stars"
+      ]
+    },
+    {
+      "name": "fire Man",
+      "age": 40,
+      "SecretIdentity": "Lucas Pal",
+      "Powers": [
+        "fire gun",
+        "fiere kick",
+        "sparkle stars"
+      ]
+    },
+    {
+      "name": "air Woman",
+      "age": 25,
+      "SecretIdentity": "Luna Prats",
+      "Powers": [
+        "win wing",
+        "air kick",
+        "double fly fair"
+      ]
+    }
+  ]
+}

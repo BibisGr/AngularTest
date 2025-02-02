@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-3">
+      <h2>{{bdata.info.count}}</h2>
+      <h2>{{bdata.info.next}}</h2>
+      <h2>{{bdata.info.pages}}</h2>
+      <h2>{{bdata.info.prev}}</h2>
+    </div>
+  </div>
+  <div class="row justify-content-space-around">
+    @for (resultado of bdata.results; track resultado) {
+      <div class="col-3">
+        <div class="card" [routerLink]="'/personaje/' + resultado.id">
+          <div class="card-header">
+            {{resultado.name}}
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{resultado.id}}</li>
+            <li class="list-group-item">{{resultado.status}}</li>
+            <li class="list-group-item">{{resultado.species}}</li>
+            <li class="list-group-item">{{resultado.type}}</li>
+            <li class="list-group-item">{{resultado.gender}}</li>
+            <li class="list-group-item">{{resultado.origin.name}}</li>
+            <li class="list-group-item">{{resultado.origin.url}}</li>
+            <li class="list-group-item">{{resultado.location.name}}</li>
+            <li class="list-group-item">{{resultado.location.url}}</li>
+            <li class="list-group-item">
+              <img src="{{resultado.image}}" width="200px"/>
+            </li>
+            <li class="list-group-item">{{resultado.url}}</li>
+            <li class="list-group-item">{{resultado.created}}</li>
+            <li class="list-group-item">
+              @for (epi of resultado.episode; track epi) {}
+            </li>
+          </ul>
+        </div>
+      </div>
+    }
+  </div>
+
+</div>
+
+ <!-- Aqui comineza la Paginacion -->
+ <div class="row">
+  <div class="col-1">
+    <button class="btn btn-primary" (click)="changePages('first')"> First</button>
+  </div>
+  <div class="col-1">
+    <button class="btn btn-primary" (click)="changePages('prev')"> Prev</button>
+  </div>
+  <div class="col-1">
+    <button class="btn btn-primary" (click)="changePages('next')"> Next</button>
+  </div>
+  <div class="col-1">
+    <button class="btn btn-primary" (click)="changePages('last')"> Last</button>
+  </div>
+</div>

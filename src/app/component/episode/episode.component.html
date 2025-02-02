@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row justify-content-space-around" >
+    @if (bdataEPI) {
+          @for (episodio of bdataEPI.results; track episodio) {
+      <div class="col-3">
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            {{episodio.name}}
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{episodio.id}}</li>
+            <li class="list-group-item">
+              @for (personaje of episodio.characters; track personaje) {}
+            </li>
+            <li class="list-group-item">{{episodio.air_date}}</li>
+            <li class="list-group-item">{{episodio.created}}</li>
+            <li class="list-group-item">{{episodio.episode}}</li>
+            <li class="list-group-item">{{episodio.url}}</li>
+          </ul>
+        </div>
+      </div>
+    }
+    }
+
+  </div>
+
+</div>

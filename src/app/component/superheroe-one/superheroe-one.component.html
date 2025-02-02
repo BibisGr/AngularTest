@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+  <div class="card">
+    <div class="card-header bg-info">
+      {{bdata.name}}
+    </div>
+    <div class="card-body">
+      <p class="card-text"><strong>Age:</strong>{{bdata.age}}</p>
+      <p class="card-text">Powers:
+        <span>
+          <ul>
+            @for (power of bdata.Powers; track power) {
+            <li>
+              {{power}}
+            </li>
+            }
+          </ul>
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
